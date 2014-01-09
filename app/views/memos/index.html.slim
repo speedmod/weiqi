@@ -1,0 +1,20 @@
+h1
+  | Listing memos(index)
+#memos
+  - @memos.each do |memo|
+    .memo
+      .viewer
+        span.body
+          = memo.body
+        = button_tag 'Edit', class: 'edit', type: :button
+      .editor
+        div
+          = button_tag 'Cancel', class: 'cancel', type: :button
+        = render 'form', memo: memo
+br
+= link_to 'New Memo', new_memo_path
+
+= form_for :memo do |f|
+  = f.text_field :body
+  = fields_for :block do |block|
+    = block.text_field :hoge

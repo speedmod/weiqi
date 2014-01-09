@@ -1,0 +1,2 @@
+module OdaJsHelper
+end

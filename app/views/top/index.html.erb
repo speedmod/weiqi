@@ -1,0 +1,22 @@
+<div id="canvas">
+<% if false %>
+  <% @blocks.each do |block| %>
+  <%= content_tag(:div, nil, class: "black",
+      data: { :"block-id" => block.id },
+      style: "left: #{block.x}px; top: #{block.y}px") %>
+  <% end %>
+<% end %>
+</div>
+
+<h3>TODO</h3>
+<ul>
+  <li>クリック位置に置くのではなく、所定の位置に置く</li>
+  <li>石の種類</li>
+  <li>アタリと石を取る表現</li>
+</ul>
+
+<h3>Tips</h3>
+<ul>
+  <li>データを全削除するためには,dbコンソールから<pre><code class="sql">delete from blocks where 1;</code></pre>を実行してください。（今後ウェブインタフェースを実装予定）</li>
+  <li><pre><code class="sql">.tables</code></pre>でテーブル一覧を確認できます。</li>
+</ul>
